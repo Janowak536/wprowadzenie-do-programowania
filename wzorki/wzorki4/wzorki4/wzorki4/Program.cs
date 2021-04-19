@@ -1,43 +1,77 @@
 ﻿using System;
 
-namespace wzorki3
+class Test
 {
-    class Program
+    public static void Main()
     {
-        static void Chain() => Console.Write("..*");
-        static void Star() => Console.Write("*");
-        static void Main(string[] args)
+        string tempString1;
+        string tempString2;
+        string tempString3;
+        string result = "";
+        int checker = 0;
+        while ((tempString1 = Console.ReadLine()) != null)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int[,] wymiary = new int[a, 2];
-            for (int i = 0; i < a; i++)
+            char[] firstLine = tempString1.ToCharArray();
+            int howMany = tempString1.Length;
+            tempString2 = Console.ReadLine();
+
+            if (tempString2 == null)
+                break;
+
+            char[] secondLine = tempString2.ToCharArray();
+            int howMany2 = tempString2.Length;
+            tempString3 = Console.ReadLine();
+
+            if (tempString3 == null)
+                break;
+
+            char[] thirdLine = tempString3.ToCharArray();
+            int howMany3 = tempString3.Length;
+            int tempLenght = 0;
+            int charAmount = 0;
+
+            while ((tempLenght <= howMany) && (tempLenght <= howMany2) && (tempLenght <= howMany3))
             {
-                string inputValues = Console.ReadLine();
-                int[] valuesArray = Array.ConvertAll<string, int>(inputValues.Split(" "), int.Parse);
-                wymiary[i, 0] = valuesArray[0];    //maksymalna szerokość
-                wymiary[i, 1] = valuesArray[1];    // maksymalna długość
+                tempLenght += 4;
+                if ((howMany > 3) && (howMany2 > 3) && (howMany3 > 3))
+                    charAmount++;
             }
-
-
-            for (int j = 0; j < a; j++)              // koniec pętli po zakończeniu obiektów
+            if (charAmount > 0)
             {
+                for (int i = 0; i <= charAmount; ++i)
+                {
+                    if (i == 0)
+                        checker = result.Length;
 
-                for (int i = 0; i <= (wymiary[j, 0] *3); i++)     //tutaj moze dodac 1 albo 2
-                {                                               // i to pisanie wierszy  długość
-                    for (int k = 0; k <= (wymiary[j,1]*3); k++)   // szerokość
+                    int notSoEasy = i * 3;
+                    if ((firstLine.Length >= (2 + i * 3)) && (secondLine.Length >= (2 + i * 3)) && (thirdLine.Length >= (2 + i * 3)))
                     {
-                        if (i==0 ||i%3==0||i== ((wymiary[j, 0] * 3)+1)||k==0||k%3==0||k==((wymiary[j, 1] * 3)+1))
-                        {
-                            Console.Write("*");
-                        }
-                        else
-                            Console.Write(".");
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == '|' && secondLine[1 + notSoEasy] == ' ' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == '|' && thirdLine[1 + notSoEasy] == '_' && thirdLine[2 + notSoEasy] == '|')
+                            result += 0;
+                        if (firstLine[1 + notSoEasy] == ' ' && secondLine[0 + notSoEasy] == ' ' && secondLine[1 + notSoEasy] == ' ' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == ' ' && thirdLine[1 + notSoEasy] == ' ' && thirdLine[2 + notSoEasy] == '|')
+                            result += 1;
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == ' ' && secondLine[1 + notSoEasy] == '_' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == '|' && thirdLine[1 + notSoEasy] == '_' && thirdLine[2 + notSoEasy] == ' ')
+                            result += 2;
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == ' ' && secondLine[1 + notSoEasy] == '_' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == ' ' && thirdLine[1 + notSoEasy] == '_' && thirdLine[2 + notSoEasy] == '|')
+                            result += 3;
+                        if (firstLine[1 + notSoEasy] == ' ' && secondLine[0 + notSoEasy] == '|' && secondLine[1 + notSoEasy] == '_' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == ' ' && thirdLine[1 + notSoEasy] == ' ' && thirdLine[2 + notSoEasy] == '|')
+                            result += 4;
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == '|' && secondLine[1 + notSoEasy] == '_' && secondLine[2 + notSoEasy] == ' ' && thirdLine[0 + notSoEasy] == ' ' && thirdLine[1 + notSoEasy] == '_' && thirdLine[2 + notSoEasy] == '|')
+                            result += 5;
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == '|' && secondLine[1 + notSoEasy] == '_' && secondLine[2 + notSoEasy] == ' ' && thirdLine[0 + notSoEasy] == '|' && thirdLine[1 + notSoEasy] == '_' && thirdLine[2 + notSoEasy] == '|')
+                            result += 6;
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == ' ' && secondLine[1 + notSoEasy] == ' ' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == ' ' && thirdLine[1 + notSoEasy] == ' ' && thirdLine[2 + notSoEasy] == '|')
+                            result += 7;
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == '|' && secondLine[1 + notSoEasy] == '_' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == '|' && thirdLine[1 + notSoEasy] == '_' && thirdLine[2 + notSoEasy] == '|')
+                            result += 8;
+                        if (firstLine[1 + notSoEasy] == '_' && secondLine[0 + notSoEasy] == '|' && secondLine[1 + notSoEasy] == '_' && secondLine[2 + notSoEasy] == '|' && thirdLine[0 + notSoEasy] == ' ' && thirdLine[1 + notSoEasy] == ' ' && thirdLine[2 + notSoEasy] == '|')
+                            result += 9;
                     }
-                    Console.WriteLine();
                 }
-                Console.WriteLine();
-                Console.WriteLine();
+                if (result.Length > checker)
+                    result += Environment.NewLine;
             }
         }
+        Console.WriteLine(result);
     }
 }
