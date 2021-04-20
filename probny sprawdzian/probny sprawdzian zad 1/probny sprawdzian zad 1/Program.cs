@@ -6,21 +6,21 @@ namespace probny_sprawdzian_zad_1
     {
         static void Main(string[] args)
         {
-            string n = Console.ReadLine(); //to usunąć
-            int a = Int32.Parse(n);  // tutaj zmienić żeby było int a = n i gotowe albo zmienić a na n
-            if (a < 3)
+            string a  = Console.ReadLine(); //to usunąć
+            int n = Int32.Parse(a);  // tutaj zmienić żeby było int a = n i gotowe albo zmienić a na n
+            if (n <= 3)
             {
                 Console.WriteLine("error");
             }
-            if(a%2==0)
+            if(n%2==0)
             {
-                a--;
+                n--;
             }
-            for (int i = 0; i < a; i++)  //wiersze
+            for (int i = 0; i < ((n+1)/2); i++)  //wiersze
             {
-                for (int j = 0; j < a; j++) //długość
+                for (int j = 0; j < n; j++) //kolumny
                 {
-                    if ( i>j|| a-i<=j)
+                    if ( i>j|| n-i<=j)
                     {
                         Console.Write(" ");
                     }
