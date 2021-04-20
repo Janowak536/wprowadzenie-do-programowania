@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>zadanie_SMPSEQ8</RootNamespace>
+    <RootNamespace>zadanie_SMPSEQ9</RootNamespace>
   </PropertyGroup>
 
 </Project>
