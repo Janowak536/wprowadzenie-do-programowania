@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zadanie SMPSEQ6", "zadanie SMPSEQ6\zadanie SMPSEQ6.csproj", "{716A06C4-01BF-4964-B5E2-C1CCAB183C04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{716A06C4-01BF-4964-B5E2-C1CCAB183C04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716A06C4-01BF-4964-B5E2-C1CCAB183C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716A06C4-01BF-4964-B5E2-C1CCAB183C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716A06C4-01BF-4964-B5E2-C1CCAB183C04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20028B96-961A-49A6-B6F1-FDBE065852FB}
+	EndGlobalSection
+EndGlobal

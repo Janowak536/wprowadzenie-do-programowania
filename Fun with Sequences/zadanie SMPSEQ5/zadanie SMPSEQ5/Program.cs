@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace zadanie_SMPSEQ5
 {
@@ -6,27 +7,25 @@ namespace zadanie_SMPSEQ5
     {
         static void Main(string[] args)
         {
-            string liczba1 = Console.ReadLine();
-            string liczby1 = Console.ReadLine();
-            string liczba2 = Console.ReadLine();
-            string liczby2 = Console.ReadLine();
-            int[] tablica1 = Array.ConvertAll<string, int>(liczby1.Split(" "), int.Parse);
-            int[] tablica2 = Array.ConvertAll<string, int>(liczby2.Split(" "), int.Parse);
-
-            for (int i = 0; i < tablica1.Length; i++)
+            try
             {
-                if (tablica1[i] == tablica2[i])
-                {
-                    if (i == 0) continue;
-                    if (i == tablica1.Length)
-                        Console.Write(i + 1);
-
-                    else
+                int liczba = int.Parse(Console.ReadLine());
+                int[] tablica1 = Console.ReadLine().Split(' ').Take(liczba).Select(int.Parse).ToArray();
+                int m = int.Parse(Console.ReadLine());
+                int[] tablica2 = Console.ReadLine().Split(' ').Take(m).Select(int.Parse).ToArray();
+                if (tablica1.Length >= 2 && tablica1.Length <= 100 && tablica1.Length >= 2 && tablica2.Length <= 100)
+                    for (int i = 0; i < tablica1.Length; i++)
                     {
-                        Console.Write((i + 1) + " ");
+                        if (tablica1[i] == tablica2[i])
+                        {
+                            Console.Write($"{ i + 1}" + ' ');
+                        }
                     }
-                }
+            }
+            catch (Exception)
+            {
 
+                return;
             }
 
         }
