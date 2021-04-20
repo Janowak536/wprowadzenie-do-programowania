@@ -21,14 +21,15 @@ namespace zadanie_SMPSEQ8
                 {
                     wynik1 = 0;
                     wynik2 = 0;
-                    for (int i = 0; i < tablica1.Length; i++)
+                    for (int i = 0; i < tablica2.Length; i++)
                     {
-                        wynik2 += tablica2[i];
+                        
                         wynik1 += tablica1[i];
-                        if (i+1==tablica1.Length)
+                        wynik2 += tablica2[i];
+                        if (i+1==tablica2.Length)
                         {
-  
-                            if (wynik1 > wynik2)
+                           
+                            if (wynik1 > wynik2 && wynik1 !=wynik2)
                             {
                                 for (int j = 0; j < tablica1.Length; j++)
                                 {
@@ -36,7 +37,7 @@ namespace zadanie_SMPSEQ8
                                 }
                                 
                             }
-                            if (wynik1 <= wynik2)
+                            if (wynik1 < wynik2 || wynik1 == wynik2)
                             {
                                 for (int j = 0; j < tablica1.Length; j++)
                                 {
