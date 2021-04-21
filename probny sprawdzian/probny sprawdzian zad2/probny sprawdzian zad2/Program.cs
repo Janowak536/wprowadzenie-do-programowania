@@ -34,7 +34,7 @@ namespace probny_sprawdzian_zad2
                 {
                     double p = ((double)a + b + c) / 2;
                     double Area = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
-                    Console.WriteLine(Math.Round(Area, precision));
+                    return Math.Round(Area, precision);
 
 
                 }
