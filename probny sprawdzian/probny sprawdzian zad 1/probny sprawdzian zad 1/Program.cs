@@ -8,7 +8,7 @@ namespace probny_sprawdzian_zad_1
         {
             string a  = Console.ReadLine(); //to usunąć
             int n = Int32.Parse(a);  // tutaj zmienić żeby było int a = n i gotowe albo zmienić a na n
-            if (n <= 3)
+            if (n < 3)
             {
                 Console.WriteLine("error");
             }
