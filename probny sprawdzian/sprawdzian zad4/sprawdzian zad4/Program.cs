@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace exceptions
+namespace sprawdzian_zad4
 {
     class Program
     {

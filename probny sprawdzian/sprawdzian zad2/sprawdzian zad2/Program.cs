@@ -7,11 +7,11 @@ namespace probny_sprawdzian_zad2
         static void Main(string[] args)
         {
             {
-                Console.WriteLine(TrapesoidIsoscelesArea(1, 1, 1, 3));
+                Console.WriteLine(TrapesoidIsoscelesArea(1,1,1,2));
             }
         }
 
-        public static double TrapesoidIsoscelesArea(int a, int b, int c, int precision = 2)
+        public static double TrapesoidIsoscelesArea(int a, int b, int c, int precision =2)
         {
             if (a > 0 && b > 0 && c > 0 && precision >= 2 && precision <= 8)
             {
@@ -23,9 +23,9 @@ namespace probny_sprawdzian_zad2
                 }
                 else
                 {
-                    double p = ((a - b) / 2;
-                    double h = Math.Sqrt((double)(p * p) - (c * c))
-                    double Area = Math.Sqrt(((double)(1 / 2) * (a + b)) * h))
+                    double p = ((a - b) / 2);
+                    double h = Math.Sqrt((double)(p * p) - (c * c));
+                    double Area = Math.Sqrt(((double)(1 / 2) * (a + b)) * h);
                     Console.WriteLine(Math.Round(Area, precision));
 
 
@@ -40,9 +40,10 @@ namespace probny_sprawdzian_zad2
 
         }
     }
-    }
 }
+
 /*double p = ((a - b) / 2;
 double h = Math.Sqrt((double)(p * p) - (c * c))
                     double Area = Math.Sqrt(((double)(1 / 2) * (a + b)) *h))
                     Console.WriteLine(Math.Round(Area, precision));*/
+
