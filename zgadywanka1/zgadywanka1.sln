@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logikaGry", "logikaGry\logikaGry.csproj", "{C142A6C7-C322-4D50-A0A9-1FD364463989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectGra", "TestProjectGra\TestProjectGra.csproj", "{C0E94982-17F0-4C07-AA53-DDF3B095F9A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraConsoleApp", "GraConsoleApp\GraConsoleApp.csproj", "{4F1A4A8E-2ECB-4785-8F99-C5B48C6D19A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C142A6C7-C322-4D50-A0A9-1FD364463989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C142A6C7-C322-4D50-A0A9-1FD364463989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C142A6C7-C322-4D50-A0A9-1FD364463989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C142A6C7-C322-4D50-A0A9-1FD364463989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E94982-17F0-4C07-AA53-DDF3B095F9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E94982-17F0-4C07-AA53-DDF3B095F9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E94982-17F0-4C07-AA53-DDF3B095F9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E94982-17F0-4C07-AA53-DDF3B095F9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F1A4A8E-2ECB-4785-8F99-C5B48C6D19A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1A4A8E-2ECB-4785-8F99-C5B48C6D19A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1A4A8E-2ECB-4785-8F99-C5B48C6D19A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1A4A8E-2ECB-4785-8F99-C5B48C6D19A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1EA5365-36F4-43E8-88C1-A0E375A04F02}
+	EndGlobalSection
+EndGlobal
