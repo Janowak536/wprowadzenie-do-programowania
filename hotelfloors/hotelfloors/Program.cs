@@ -1,48 +1,54 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
 namespace hotelfloors
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Test(char[][] size, int a, int b, ref int guest)
+        {
+            if (size[a][b] == 'v' || size[a][b] == '#') return;
+            if (size[a][b] == '*') guest ++;
+            size[a][b] = 'v';
+            Test(size, a + 1, b, ref guest);
+            Test(size, a - 1, b, ref guest);
+            Test(size, a, b + 1, ref guest);
+            Test(size, a, b - 1, ref guest);
+        }
+        static void Main(string[] args)
         {
             int numberoffloors = int.Parse(Console.ReadLine());
             for (int i = 0; i < numberoffloors; i++)
             {
                 int guest = 0;
                 int room = 0;
-                string[] size = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                int height = int.Parse(size[0]);
-                int width = int.Parse(size[1]);
-                char[][] pattern = new char[width][];  
+                string[] input = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                int height = int.Parse(input[0]);
+                int width = int.Parse(input[1]);
+                char[][] size = new char[height][];
                 for (int k = 0; k < height; k++)
                 {
-                    pattern[k] = new char[width];
-                    pattern[k] = Console.ReadLine().ToCharArray();
+                    size[k] = new char[width];
+                    size[k] = Console.ReadLine().ToCharArray();
                 }
-                for (int j = 0; j < height; j++)
+                
+                for (int k = 0; k < height; k++)
                 {
-                    for (int l = 0; l < width; l++)
+                    for (int j = 0; j < width; j++)
                     {
-                        if (pattern[j][l] == '-' || pattern[j][l] == '*')
+                        if (size[k][j] == '-' || size[k][j] == '*')
                         {
-                            room+=1;
-                            Test(pattern, j, l, ref guest);
+                            room ++;
+                            Test(size, k, j, ref guest);
                         }
                     }
                 }
                 Console.WriteLine((1f * guest / room).ToString("F"));
             }
         }
-        public static void Test(char[][] pattern, int a, int b, ref int guest)
-        {
-            if (pattern[a][b] == 'x' || pattern[a][b] == '#') return;
-            if (pattern[a][b] == '*') guest++;
-            pattern[a][b] = 'x';
-            Test(pattern, a + 1, b, ref guest);
-            Test(pattern, a - 1, b, ref guest);
-            Test(pattern, a, b + 1, ref guest);
-            Test(pattern, a, b - 1, ref guest);
-        }
+       
     }
 }
