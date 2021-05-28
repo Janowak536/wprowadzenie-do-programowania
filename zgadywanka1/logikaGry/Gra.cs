@@ -10,6 +10,20 @@ namespace logikaGry
         public int MinZakres { get; }
         public int MaxZakres { get; }
 
+        public int? WylosowanaLiczba
+        {
+            get 
+            {
+                if(StatusGry != Status.Trwa )
+                return wylosowanaLiczba;
+
+                return null;
+            }
+        }
+
+        public enum Status { Trwa, Poddana, Zakonczona}
+        public Status StatusGry { get; private set; }
+
         // historia gry - lista ruchów
         private List<Ruch> historiaGry;
         public IReadOnlyList<Ruch> HistoriaGry => historiaGry;
@@ -28,6 +42,7 @@ namespace logikaGry
             MinZakres = min;
             MaxZakres = max;
             historiaGry = new List<Ruch>();
+            StatusGry = Status.Trwa;
         }
 
 
@@ -37,17 +52,18 @@ namespace logikaGry
         {
             if (propozycja < wylosowanaLiczba)
             {
-                historiaGry.Add(new Ruch(propozycja, Odpowiedz.ZaMalo));
+                historiaGry.Add(new Ruch(propozycja, Odpowiedz.ZaMalo, StatusGry));
                 return Odpowiedz.ZaMalo;
             }
             else if (propozycja > wylosowanaLiczba)
             {
-                historiaGry.Add(new Ruch(propozycja, Odpowiedz.ZaDuzo));
+                historiaGry.Add(new Ruch(propozycja, Odpowiedz.ZaDuzo, StatusGry));
                 return Odpowiedz.ZaDuzo;
             }
             else
             {
-                historiaGry.Add(new Ruch(propozycja, Odpowiedz.Trafiony));
+                StatusGry = Status.Zakonczona;
+                historiaGry.Add(new Ruch(propozycja, Odpowiedz.Trafiony, StatusGry));
                 return Odpowiedz.Trafiony;
             }
         }
@@ -55,5 +71,11 @@ namespace logikaGry
         public enum Odpowiedz {ZaMalo=-1, Trafiony=0, ZaDuzo=1};
 
 
+
+        public void Poddaj()
+        {
+            StatusGry = Status.Poddana;
+            historiaGry.Add(new Ruch(null, null, StatusGry));
+        }
     }
 }
