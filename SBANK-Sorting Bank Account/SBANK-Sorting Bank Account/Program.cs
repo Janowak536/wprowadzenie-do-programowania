@@ -18,7 +18,7 @@ namespace SBANK_Sorting_Bank_Account
                 int Counted;
                 if (AccountCount.TryGetValue(account, out Counted))
                 {
-                    AccountCount[account] = Counted + 1;
+                    AccountCount[account] = Counted +1;
                 }
                 else
                 {
@@ -40,8 +40,8 @@ namespace SBANK_Sorting_Bank_Account
         private static void Main()
         {
             var output = new StringBuilder();
-            int remainingTestCases = int.Parse(Console.ReadLine());
-            while (remainingTestCases-- > 0)
+            int Tests = int.Parse(Console.ReadLine());
+            while (Tests-- > 0)
             {
                 SBANK.Logic(
                     accountCount: int.Parse(Console.ReadLine()),
