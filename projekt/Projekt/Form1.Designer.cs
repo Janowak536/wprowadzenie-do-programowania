@@ -82,6 +82,7 @@ namespace Projekt
             this.label15 = new System.Windows.Forms.Label();
             this.SP = new System.Windows.Forms.Label();
             this.SI = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.MemorySelectors.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -573,9 +574,9 @@ namespace Projekt
             // 
             this.ExecuteButton.Location = new System.Drawing.Point(255, 262);
             this.ExecuteButton.Name = "ExecuteButton";
-            this.ExecuteButton.Size = new System.Drawing.Size(165, 60);
+            this.ExecuteButton.Size = new System.Drawing.Size(175, 35);
             this.ExecuteButton.TabIndex = 43;
-            this.ExecuteButton.Text = "Wykonaj Rozkaz Procesora";
+            this.ExecuteButton.Text = "Wykonaj";
             this.ExecuteButton.UseVisualStyleBackColor = true;
             this.ExecuteButton.Click += new System.EventHandler(this.ExecuteButton_Click);
             // 
@@ -639,12 +640,21 @@ namespace Projekt
             this.SI.TabIndex = 44;
             this.SI.Text = "0000";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(672, 403);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(169, 38);
+            this.textBox1.TabIndex = 50;
+            this.textBox1.Text = "Jan Nowak 13196";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(865, 462);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.SP_Value);
             this.Controls.Add(this.SI_Value);
             this.Controls.Add(this.label14);
@@ -687,7 +697,7 @@ namespace Projekt
             this.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.MenuText;
             this.Name = "Form1";
-            this.Text = "Symulator - Jan Nowak";
+            this.Text = "Symulator procesora INTEL 8086";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MemorySelectors.ResumeLayout(false);
             this.MemorySelectors.PerformLayout();
@@ -760,6 +770,7 @@ namespace Projekt
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label SP;
         private System.Windows.Forms.Label SI;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
